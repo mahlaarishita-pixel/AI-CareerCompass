@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI CareerCompass</title><link rel="stylesheet" href="/static/style.css"></head>
+<body><main class="wrap"><nav><div class="brand">◈ CareerCompass</div><span class="tag">RESUME INTELLIGENCE</span></nav>
+<section class="hero"><p class="eyebrow">YOUR NEXT OPPORTUNITY, MORE CLEARLY</p><h1>Make your resume<br><em>match the opportunity.</em></h1><p class="sub">Compare your resume with an internship or job description. Find evidenced matches, gaps and practical next steps.</p></section>
+{% if error %}<div class="error">{{error}}</div>{% endif %}
+<form action="/analyse" method="post" enctype="multipart/form-data" class="panel">
+<div class="field"><label>01 / RESUME</label><h2>Add your resume</h2><p class="hint">Paste resume text or upload a PDF/TXT file (max 8 MB). Remove personal contact details first.</p><textarea name="resume_text" rows="9" placeholder="Paste your resume text here..."></textarea><div class="or">OR UPLOAD FILE</div><input type="file" name="resume_file" accept=".pdf,.txt"></div>
+<div class="field"><label>02 / OPPORTUNITY</label><h2>Job description</h2><p class="hint">Paste the complete internship or job description.</p><textarea name="job_description" rows="9" required placeholder="Paste role requirements, responsibilities and eligibility..."></textarea></div>
+<button type="submit">Analyse my match <span>→</span></button><p class="disclaimer">Prototype analysis is an assistive guide, not a hiring decision. It does not determine whether you truly possess a skill.</p>
+</form><footer>Prompt Syndicate · SCSE4041 · Milestone 2 prototype</footer></main></body></html>

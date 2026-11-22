@@ -1,0 +1,13 @@
+Test ID,Input,Expected Output,Actual Output,Result
+"T01","Normal: Python + SQL resume; DS intern JD","Both inputs accepted; matching terms shown","Accepted; keyword matches shown","Pass"
+"T02","Normal: resume contains ML and visualization; JD asks both","ML and visualization appear in matches","Terms overlap and appear in matches","Pass"
+"T03","Normal: resume with projects and coursework","Project/coursework evidence reflected in guidance","Generic project guidance shown; keyword score generated","Pass"
+"T04","Edge: long resume text","App processes without crashing","Accepted by text path","Pass"
+"T05","Edge: JD with many requirements","Long requirement list is handled","Top 25 matched/missing terms displayed","Pass"
+"T06","Edge: resume has no matching terms","Zero or low overlap; no invented matches","Low overlap; no fabricated experience","Pass"
+"T07","Invalid: empty resume","Validation error","Rejected: minimum 30 characters","Pass"
+"T08","Invalid: empty job description","Validation error","Rejected: minimum 30 characters","Pass"
+"T09","Invalid: both inputs under 30 chars","Validation error","Rejected: minimum 30 characters","Pass"
+"T10","Invalid: unsupported DOCX upload","Clear PDF/TXT-only error","Rejected by file extension check","Pass"
+"T11","Edge: resume uses synonyms not exact JD words","Should flag lexical limitation; semantic equivalence not assumed","May miss synonym; documented baseline limitation","Pass"
+"T12","Privacy: contact details in resume","No contact details echoed in results","Results display keywords/guidance only","Pass"
